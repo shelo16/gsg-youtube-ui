@@ -1,0 +1,15 @@
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.comment-header-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.comment-wrapper {
+  display: flex;
+  justify-content: center;
+}

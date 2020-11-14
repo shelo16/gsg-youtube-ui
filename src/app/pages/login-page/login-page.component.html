@@ -1,0 +1,28 @@
+<h1 mat-dialog-title style='text-align: center;'>Log In</h1>
+
+
+<div class="wrapper">
+  <form [formGroup]="loginFormGroup">
+    <mat-form-field class="full-width-input">
+      <mat-label>მომხმარებელი</mat-label>
+      <input matInput formControlName="username" autocomplete="off" required>
+      <mat-error>
+        Please provide a valid username address
+      </mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="full-width-input password-field">
+      <mat-label>პაროლი</mat-label>
+      <input matInput type="password" formControlName="password" required>
+      <mat-error>
+        Please provide a valid password
+      </mat-error>
+    </mat-form-field>
+    <div mat-dialog-actions class="DialogButtonsWrapper">
+      <button mat-flat-button color='primary' (click)="login()" [loading]="buttonLoading">
+        ავტორიზაცია
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,2 @@
+<app-login-page *ngIf="!(authDataService.loggedIn$ | async)"></app-login-page>
+<app-youtube-page *ngIf="authDataService.loggedIn$ | async"></app-youtube-page>

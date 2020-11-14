@@ -1,0 +1,29 @@
+<div class="navigation-wrapper">
+  <div class="logo-wrapper">
+    <a routerLink="/">
+      <img src="../../assets/images/gsgLogo.jpg" alt="GSG logo" class="gsg-logo">
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <div *ngIf="!(authDataService.loggedIn$ | async)">
+        <button mat-raised-button color="primary" (click)="openDialog()" class="AuthButtons">
+          <strong>+</strong> რეგისტრაცია
+        </button>
+      </div>
+    </ul>
+  </nav>
+  <div class="user-section">
+    <div class="userWrapper" *ngIf="authDataService.loggedIn$ | async">
+      <div class="user-image-wrapper">
+        <img src="./assets/images/user.png" [title]="authDataService.username$ | async" alt="user logo">
+      </div>
+      <div>
+        <p>{{authDataService.username$ | async}}</p>
+      </div>
+    </div>
+    <div class="logout-image-wrapper" *ngIf="authDataService.loggedIn$ | async">
+      <img src="../../assets/images/logout.png" (click)="logout()" style="width:27px" alt="logout logo" title="logout">
+    </div>
+  </div>
+</div>

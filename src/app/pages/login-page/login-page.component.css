@@ -1,0 +1,20 @@
+
+
+mat-form-field {
+  display: block;
+}
+
+.full-width-input {
+  width: 40%;
+  margin-left: 30%;
+}
+
+.password-field{
+  margin-top: 5%;
+}
+
+.DialogButtonsWrapper {
+  display: flex;
+  justify-content: center;
+}
+
