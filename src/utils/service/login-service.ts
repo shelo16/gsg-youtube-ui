@@ -9,6 +9,7 @@ import {ApiService} from './api.service';
 export class LoginService {
 
   endpoint: string = '/auth';
+  endpointDictionary: string = '/dictionary';
   headers = new HttpHeaders()
     .set('Content-Type', 'application/json');
 
@@ -19,6 +20,18 @@ export class LoginService {
 
   public authenticate(authUser) {
     return this.apiService.postWithCredentials(`${this.endpoint}/authenticate`, authUser, this.headers);
+  }
+
+  public resetUserData(authUserData) {
+    return this.apiService.postWithCredentials(`${this.endpoint}/reset`, authUserData, this.headers);
+  }
+
+  public getUserDataForReset() {
+    return this.apiService.getWithCredentials(`${this.endpoint}/resetUserData`);
+  }
+
+  public getCountryDropDown() {
+    return this.apiService.getWithoutCredentials(`${this.endpointDictionary}/country-drop-down`);
   }
 
   public checkIfAuthenticated() {

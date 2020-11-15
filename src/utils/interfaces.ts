@@ -3,3 +3,7 @@ export interface YoutubeLink {
   comment: string;
 }
 
+export interface ToUpdateUserData {
+  countryId: number;
+  jobTriggerTime: number;
+}

@@ -14,7 +14,7 @@ export class RegistrationService {
   }
 
 
-  public generateRegisterShortLink(gsgUser) {
+  public registerUser(gsgUser) {
     return this.apiService.postWithoutCredentials(`${this.endpoint}/register`,gsgUser,this.headers);
   }
 

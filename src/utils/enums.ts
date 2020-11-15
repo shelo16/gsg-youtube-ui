@@ -1,4 +1,4 @@
 export enum Modals {
-  LoginModal,
+  ResetModal,
   RegisterModal
 }

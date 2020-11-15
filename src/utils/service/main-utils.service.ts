@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {Modals} from '../enums';
 import {RegisterModalComponent} from '../../app/pages/register-modal/register-modal.component';
+import {ResetPageComponent} from '../../app/pages/reset-page/reset-page.component';
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +25,8 @@ export class MainUtilsService {
     switch (modal) {
       case Modals.RegisterModal:
         return RegisterModalComponent;
-      // case Modals.RegisterMainModal:
-      //   return RegisterMainComponent;
+      case Modals.ResetModal:
+        return ResetPageComponent;
       // case Modals.RegisterConfirmModal:
       //   return RegisterConfirmComponent;
       // case Modals.ForgotPassword:

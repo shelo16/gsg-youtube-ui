@@ -55,9 +55,23 @@ export class NavigationComponent implements OnInit {
     this.snackbarService.openSnackBar('წარმატებით გაიარეთ logout',3000)
   }
 
-
-  openDialog() {
+  openDialog(modalName:string) {
+    if (modalName == 'Register'){
       this.mainUtils.openDialog(Modals.RegisterModal);
+    }else {
+      this.loginService.getUserDataForReset()
+        .subscribe(
+          data => {
+            const dialogData = {
+              userData: data
+            };
+            this.mainUtils.openDialog(Modals.ResetModal,dialogData);
+          }, error => {
+            console.log(error);
+          }
+        );
+
+    }
   }
 
 }

@@ -7,14 +7,14 @@
   <nav>
     <ul>
       <div *ngIf="!(authDataService.loggedIn$ | async)">
-        <button mat-raised-button color="primary" (click)="openDialog()" class="AuthButtons">
+        <button mat-raised-button color="primary" (click)="openDialog('Register')" class="AuthButtons">
           <strong>+</strong> რეგისტრაცია
         </button>
       </div>
     </ul>
   </nav>
   <div class="user-section">
-    <div class="userWrapper" *ngIf="authDataService.loggedIn$ | async">
+    <div class="userWrapper" *ngIf="authDataService.loggedIn$ | async" (click)="openDialog('Reset')">
       <div class="user-image-wrapper">
         <img src="./assets/images/user.png" [title]="authDataService.username$ | async" alt="user logo">
       </div>

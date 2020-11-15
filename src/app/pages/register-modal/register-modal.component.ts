@@ -38,7 +38,7 @@ export class RegisterModalComponent implements OnInit {
   applyData() {
     this.buttonLoading = true;
     console.log(this.registerFormGroup.value);
-    this.regService.generateRegisterShortLink(this.registerFormGroup.value)
+    this.regService.registerUser(this.registerFormGroup.value)
       .pipe(finalize(() => this.buttonLoading = false))
       .subscribe(
         data => {

@@ -25,6 +25,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { YoutubePageComponent } from './pages/youtube-page/youtube-page.component';
 import { RegisterModalComponent } from './pages/register-modal/register-modal.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ResetPageComponent } from './pages/reset-page/reset-page.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     LoginPageComponent,
     YoutubePageComponent,
     RegisterModalComponent,
+    ResetPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatGridListModule,
+    MatSelectModule,
   ],
   entryComponents : [MatProgressSpinner],
   providers: [
